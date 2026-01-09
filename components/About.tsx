@@ -70,7 +70,7 @@ const About: React.FC = () => {
             rel="noopener noreferrer"
             className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-pastel-blue hover:border-pastel-blue hover:shadow-md transition-all duration-300 active:scale-95"
           >
-            <Linkedin size={18} className="group-hover:scale-110 transition-transform" />
+            <Linkedin size={18} className="group-hover:scale-110 shrink-0 transition-transform" />
             <span className="text-sm font-semibold">LinkedIn</span>
           </a>
           
@@ -78,7 +78,7 @@ const About: React.FC = () => {
             href="mailto:bastosanaa11@gmail.com" 
             className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-pastel-clay hover:border-pastel-clay hover:shadow-md transition-all duration-300 active:scale-95"
           >
-            <Mail size={18} className="group-hover:scale-110 transition-transform" />
+            <Mail size={18} className="group-hover:scale-110 shrink-0 transition-transform" />
             <span className="text-sm font-semibold">Email</span>
           </a>
           <a 
@@ -87,7 +87,7 @@ const About: React.FC = () => {
             rel="noopener noreferrer"
             className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-stone-900 hover:border-stone-400 hover:shadow-md transition-all duration-300 active:scale-95"
           >
-            <Github size={18} className="group-hover:scale-110 transition-transform" />
+            <Github size={18} className="group-hover:scale-110 shrink-0 transition-transform" />
             <span className="text-sm font-semibold">GitHub</span>
           </a>
         </div>
