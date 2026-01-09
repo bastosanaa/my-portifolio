@@ -201,10 +201,9 @@ const EN_CONTENT = {
     title: "Academic Background",
     items: [
       {
-      degree: "Bachelor of Information Systems",
+        degree: "Bachelor of Information Systems",
         institution: "Federal University of Santa Catarina (UFSC)",
-                period: "Exp. Graduation: 2027.2",
-
+        period: "Exp. Graduation: 2027.2",
         description: `I chose the Information Systems degree because I saw in it the ideal combination of technology, business vision, and process management. Since the beginning of my studies, my goal has been to develop not only technical skills but also analytical and organized thinking, capable of transforming ideas into viable and well-structured digital solutions.
         Throughout the course, I engaged with areas such as software development, system architecture, databases, software engineering, and project management—fields that spark my interest by allowing me to act in every stage of product construction, from planning to implementation.`,
         topics: [

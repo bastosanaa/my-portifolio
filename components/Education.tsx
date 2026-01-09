@@ -22,7 +22,6 @@ const Education: React.FC = () => {
               {/* Mobile Icon alternative */}
               <div className="sm:hidden flex items-center gap-2 mb-2 text-pastel-sage">
                 <GraduationCap size={20} />
-                <span className="text-xs font-bold uppercase tracking-wider text-stone-400">Graduação</span>
               </div>
 
               <div className="space-y-3 md:space-y-4 w-full">
