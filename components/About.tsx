@@ -1,5 +1,5 @@
 import React from 'react';
-import { Palette, Terminal, Mountain, Github, Linkedin, Mail } from 'lucide-react';
+import { Palette, Terminal, Github, Linkedin, Mail, Goal } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const About: React.FC = () => {
@@ -33,8 +33,8 @@ const About: React.FC = () => {
               <span>{content.hero.badges.creative}</span>
             </div>
             <div className="flex items-center gap-2 text-[10px] md:text-xs font-medium uppercase tracking-wider text-stone-600 bg-pastel-sageLight px-3 py-2 rounded-full border border-pastel-sage/30 shadow-sm transition-transform hover:scale-105 cursor-default">
-              <Mountain size={14} className="text-pastel-sage" />
-              <span>{content.hero.badges.nature}</span>
+              <Goal size={14} className="text-pastel-sage" />
+              <span>{content.hero.badges.dedication}</span>
             </div>
         </div>
       </div>
@@ -63,18 +63,9 @@ const About: React.FC = () => {
 
         {/* Contact Buttons - Call to Action (Moved Here) */}
         <div className="flex flex-wrap justify-center gap-3 w-full md:max-w-[280px]">
-          <a 
-            href="https://github.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-stone-900 hover:border-stone-400 hover:shadow-md transition-all duration-300 active:scale-95"
-          >
-            <Github size={18} className="group-hover:scale-110 transition-transform" />
-            <span className="text-sm font-semibold">GitHub</span>
-          </a>
           
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/ana-bastos-7b0103272/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-pastel-blue hover:border-pastel-blue hover:shadow-md transition-all duration-300 active:scale-95"
@@ -84,11 +75,20 @@ const About: React.FC = () => {
           </a>
           
           <a 
-            href="mailto:email@exemplo.com" 
+            href="mailto:bastosanaa11@gmail.com" 
             className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-pastel-clay hover:border-pastel-clay hover:shadow-md transition-all duration-300 active:scale-95"
           >
             <Mail size={18} className="group-hover:scale-110 transition-transform" />
             <span className="text-sm font-semibold">Email</span>
+          </a>
+          <a 
+            href="https://github.com/bastosanaa" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex-1 min-w-[100px] group flex items-center justify-center gap-2 px-4 py-2 bg-white border border-stone-200 rounded-lg text-stone-600 hover:text-stone-900 hover:border-stone-400 hover:shadow-md transition-all duration-300 active:scale-95"
+          >
+            <Github size={18} className="group-hover:scale-110 transition-transform" />
+            <span className="text-sm font-semibold">GitHub</span>
           </a>
         </div>
       </div>

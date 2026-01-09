@@ -12,12 +12,12 @@ interface Content {
     badges: {
       tech: string;
       creative: string;
-      nature: string;
+      dedication: string;
     }
   };
   education: {
     title: string;
-    item: EducationItem;
+    items: EducationItem[];
   };
   experience: {
     title: string;
@@ -49,20 +49,22 @@ const PT_CONTENT: Content = {
   hero: {
     name: "Ana Luiza",
     role: "Desenvolvedora de Software",
-    tagline: "Criatividade e tecnologia transformando ideias em soluções reais.",
-    bio: "Ana Luiza é desenvolvedora de software com perfil criativo, curiosa e orientada a evolução constante. Gosta de esportes, natureza e atividades ao ar livre, além de trabalhos manuais e criativos como crochê, desenho e pintura — interesses que influenciam diretamente sua forma de pensar, criar e resolver problemas. Enxerga a programação como uma ferramenta que une lógica e criatividade, permitindo transformar ideias em soluções digitais funcionais, bem estruturadas e com propósito.",
+    tagline: "Apaixonada por desafios que unem criatividade e tecnologia para transformar ideias em soluções reais.",
+    bio: "Sou desenvolvedora fullstack movida por desafios, criatividade e aprendizado contínuo, acreditando que a prática constante é o caminho para evoluir tecnicamente e criar soluções cada vez melhores. Encontrei na programação uma forma de unir lógica, organização e criatividade para transformar boas ideias (ou simplesmente ideias divertidas) em produtos digitais funcionais, bem estruturados e pensados para pessoas. Me considero uma profissional flexível, aberta a aprender novas ferramentas e abordagens para resolver problemas da forma mais eficiente possível.",
     badges: {
       tech: "Tecnologia",
       creative: "Criatividade",
-      nature: "Natureza"
+      dedication: "Dedicação"
     }
   },
   education: {
     title: "Formação Acadêmica",
-    item: {
+    items: [
+      {
       degree: "Bacharelado em Sistemas de Informação",
       institution: "Universidade Federal de Santa Catarina (UFSC)",
-      description: "Ana escolheu Sistemas de Informação por ser um curso que une tecnologia, visão de negócio e gestão. Ao longo da graduação, desenvolveu tanto habilidades técnicas quanto pensamento analítico e organizacional, com foco em transformar ideias em produtos digitais estruturados, escaláveis e funcionais.",
+      description: `Escolhi o curso de Sistemas de Informação por enxergar nele a combinação ideal entre tecnologia, visão de negócio e gestão de processos. Desde o início da graduação, meu objetivo foi desenvolver não apenas habilidades técnicas, mas também um pensamento analítico e organizado, capaz de transformar ideias em soluções digitais viáveis e bem estruturadas.
+      Ao longo do curso, tive contato com áreas como desenvolvimento de software, arquitetura de sistemas, bancos de dados, engenharia de software e gestão de projetos, campos que despertam meu interesse por permitirem atuar em todas as etapas de construção de um produto, do planejamento à implementação.`,
       topics: [
         "Desenvolvimento de Software",
         "Arquitetura de Sistemas",
@@ -70,7 +72,17 @@ const PT_CONTENT: Content = {
         "Gestão de Projetos",
         "Bancos de Dados"
       ]
-    }
+    },
+    {
+        degree: "Curso de Inglês Avançado",
+        institution: "Escola SESC Idiomas",
+        description: 'Cursei inglês como língua secundária até o nível avançado por compreender a importância de quebrar as barreiras do idioma na comunicação, no acesso ao conhecimento e na atuação em um mercado cada vez mais globalizado.',
+        topics: [
+          "Inglês avançado",
+          "Comunicação"
+        ]
+      }
+  ]
   },
   experience: {
     title: "Trajetória Profissional",
@@ -79,38 +91,39 @@ const PT_CONTENT: Content = {
         company: "AID Health",
         role: "Desenvolvedora Fullstack",
         period: "Recente",
-        description: "Criação de um produto do zero em startup de saúde, com foco em boas práticas e princípios SOLID.",
+        description: "Criação de um produto do zero em startup de saúde",
         achievements: [
           "Levantamento de requisitos com Product Owners e definição de MVP.",
           "Modelagem de banco de dados relacional do zero.",
+          "Criação de testes unitários e de integração.",
+          "Aplicação de princípios SOLID e Clean Code.",
           "Desenvolvimento frontend responsivo e fiel ao design.",
-          "Apoio à entrada de novos desenvolvedores no projeto.",
-          "Criação de testes unitários e de integração."
+          "Apoio e liderança na entrada de novos desenvolvedores no projeto.",
+          "Aplicação de metodologias ágeis."
         ],
-        techStack: ["Java", "Spring Boot", "Angular", "SQL"]
+        techStack: ["Java", "Spring Boot", "Angular", "PostgreSQL"]
       },
       {
         company: "Salutho",
         role: "Desenvolvedora Fullstack",
         period: "Anterior",
-        description: "Atuação em SaaS de Gestão Clínica (produto real de mercado), focada em novas features e melhorias.",
+        description: "Atuação em SaaS de Gestão Clínica, focada em novas features e melhorias.",
         achievements: [
-          "Desenvolvimento de módulo de gerenciamento de estoque.",
+          "Desenvolvimento de módulo de gerenciamento de estoque e serviço de chat interno",
           "Sistema de mensageria para WhatsApp (lembretes e confirmações).",
-          "Implementação de serviço de chat e participação nas discussões de produto.",
-          "Foco em usabilidade e experiência do usuário."
+          "Participação nas discussões de produto com foco em usabilidade e experiência do usuário."
         ],
         techStack: ["React", "Django", "PostgreSQL", "Python"]
       },
       {
         company: "LabTIC (UDESC)",
-        role: "Estágio em Desenvolvimento Fullstack",
+        role: "Desenvolvedora Fullstack",
         period: "Início",
         description: "Construção de sistemas sem uso de frameworks para compreensão profunda da linguagem.",
         achievements: [
           "Construção do zero de um sistema de gestão estudantil.",
           "Uso de JavaScript puro para fixação de conceitos.",
-          "Manutenção do sistema oficial da UDESC (Polvo).",
+          "Manutenção do sistema de gestão oficial da UDESC.",
           "Metodologia ágil SCRUM e correção de bugs."
         ],
         techStack: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
@@ -128,63 +141,46 @@ const PT_CONTENT: Content = {
     },
     items: [
       {
-        title: "Sistema de Gestão Clínica",
-        description: "Plataforma SaaS para clínicas, focada em otimizar o fluxo de atendimento e controle de estoque de insumos médicos.",
-        image: "https://picsum.photos/600/400?random=1",
-        tags: ["React", "Django", "PostgreSQL"],
-        githubUrl: "#",
-        category: 'personal'
-      },
-      {
-        title: "App de Monitoramento de Saúde",
-        description: "Aplicação MVP desenvolvida com arquitetura limpa, permitindo acompanhamento de métricas vitais de pacientes.",
-        image: "https://picsum.photos/600/400?random=2",
-        tags: ["Java", "Spring Boot", "Angular"],
-        githubUrl: "#",
+        title: "Upsidenet Challenge",
+        description: "O projeto simula um ecossistema de laboratórios fictícios para demonstrar a implementação de Private Data Collections, segregando informações públicas de dados sensíveis entre diferentes organizações.",
+        image: "/assets/portfolio/upsidenet.png",
+        tags: ["Go", "Blockchain"],
+        githubUrl: "https://github.com/bastosanaa/upsidenet-challenge",
         category: 'challenge'
       },
       {
-        title: "Portal Acadêmico LabTIC",
-        description: "Sistema de gerenciamento de entidades acadêmicas desenvolvido com foco em performance e usabilidade.",
-        image: "https://picsum.photos/600/400?random=3",
-        tags: ["Vue.js", "Node.js", "MongoDB"],
-        githubUrl: "#",
+        title: "Parallel Prog Project",
+        description: "Explora conceitos de programação paralela implementando três versões de uma tarefa: sequencial, com multi-threading manual e utilizando uma biblioteca de thread-pool personalizada.",
+        image: "/assets/portfolio/parallel_prog.png",
+        tags: ["C", "Parallel Programming"],
+        githubUrl: "https://github.com/bastosanaa/parallel_prog_project",
         category: 'academic'
       },
       {
-        title: "API de Gerenciamento de Tarefas",
-        description: "API RESTful desenvolvida para exercitar conceitos avançados de Spring Security e autenticação JWT.",
-        image: "https://picsum.photos/600/400?random=4",
-        tags: ["Java", "Spring Boot", "JWT", "Docker"],
-        githubUrl: "#",
-        category: 'challenge'
-      },
-      {
-        title: "Dashboard de Clima",
-        description: "Interface interativa para visualização de dados meteorológicos consumindo APIs externas em tempo real.",
-        image: "https://picsum.photos/600/400?random=5",
-        tags: ["Vue.js", "Axios", "CSS Grid"],
-        githubUrl: "#",
+        title: "Portal Acadêmico (Polvo)",
+        description: "Sistema de gerenciamento de entidades acadêmicas e realização de atividades avaliativas desenvolvido em JavaScript puro com foco em aprendizagem",
+        image: "/assets/portfolio/labtic_polvo.PNG",
+        tags: ["JavaScript", "Node.js", "MongoDB"],
+        githubUrl: "",
         category: 'personal'
       },
       {
-        title: "Algoritmos de Ordenação Visual",
-        description: "Projeto educativo para visualização e comparação de performance entre diferentes algoritmos de sorting.",
-        image: "https://picsum.photos/600/400?random=6",
-        tags: ["JavaScript Vanilla", "Canvas API"],
-        githubUrl: "#",
+        title: "API Sistema Antifurto",
+        description: "API desenvolvida em Go com arquitetura de microsserviços para o controle, monitoramento e notificação de sistemas de alarme antifurto",
+        image: "/assets/portfolio/security_sys.PNG",
+        tags: ["Go", "Microservices"],
+        githubUrl: "https://github.com/bastosanaa/sistemaAntifurtoAPI",
         category: 'academic'
-      }
+      },
     ]
   },
   footer: {
     rights: "Construído com React e Tailwind."
   }
 };
-
-const EN_CONTENT: Content = {
+const EN_CONTENT = {
   nav: [
-    { label: 'About', href: '#sobre' },
+    { label: 'About', href: '#sobre' }, // Mantive os hrefs iguais para não quebrar a navegação
     { label: 'Education', href: '#formacao' },
     { label: 'Experience', href: '#experiencia' },
     { label: 'Portfolio', href: '#portfolio' },
@@ -192,28 +188,40 @@ const EN_CONTENT: Content = {
   hero: {
     name: "Ana Luiza",
     role: "Software Developer",
-    tagline: "Creativity and technology transforming ideas into real solutions.",
-    bio: "Ana Luiza is a software developer with a creative profile, curious and driven by constant evolution. She enjoys sports, nature, and outdoor activities, as well as manual and creative work such as crochet, drawing, and painting — interests that directly influence her way of thinking, creating, and solving problems. She sees programming as a tool that unites logic and creativity, enabling the transformation of ideas into functional, well-structured, and purposeful digital solutions.",
+    tagline: "Passionate about challenges that combine creativity and technology to transform ideas into real solutions.",
+    bio: "I am a Fullstack Developer driven by challenges, creativity, and continuous learning. I believe that constant practice is the key to technical evolution and creating increasingly better solutions. In programming, I found a way to combine logic, organization, and creativity to transform good ideas (or simply fun ones) into functional, well-structured, user-centric digital products. I consider myself a flexible professional, open to learning new tools and approaches to solve problems as efficiently as possible.",
     badges: {
       tech: "Technology",
       creative: "Creativity",
-      nature: "Nature"
+      dedication: "Dedication"
     }
   },
   education: {
     title: "Academic Background",
-    item: {
+    items: [
+      {
       degree: "Bachelor of Information Systems",
-      institution: "Federal University of Santa Catarina (UFSC)",
-      description: "Ana chose Information Systems because it bridges advanced technology, business vision, and strategic management. Throughout her degree, she developed both technical skills and analytical thinking, focusing on transforming ideas into structured, scalable, and functional digital products.",
-      topics: [
-        "Software Development",
-        "Systems Architecture",
-        "Software Engineering",
-        "Project Management",
-        "Databases"
-      ]
-    }
+        institution: "Federal University of Santa Catarina (UFSC)",
+        description: `I chose the Information Systems degree because I saw in it the ideal combination of technology, business vision, and process management. Since the beginning of my studies, my goal has been to develop not only technical skills but also analytical and organized thinking, capable of transforming ideas into viable and well-structured digital solutions.
+        Throughout the course, I engaged with areas such as software development, system architecture, databases, software engineering, and project management—fields that spark my interest by allowing me to act in every stage of product construction, from planning to implementation.`,
+        topics: [
+          "Software Development",
+          "System Architecture",
+          "Software Engineering",
+          "Project Management",
+          "Databases"
+        ]
+      },
+      {
+        degree: "Advanced English Course",
+        institution: "SESC Language School",
+        description: "I studied English as a second language to an advanced level, recognizing the importance of overcoming language barriers for communication, knowledge access, and operating within an increasingly globalized technology market.",
+        topics: [
+          "Advanced English",
+          "Communication"
+        ]
+      }
+    ]
   },
   experience: {
     title: "Professional Journey",
@@ -222,39 +230,40 @@ const EN_CONTENT: Content = {
         company: "AID Health",
         role: "Fullstack Developer",
         period: "Recent",
-        description: "Building a health startup product from scratch, focusing on best practices and SOLID principles.",
+        description: "Building a product from scratch at a health startup",
         achievements: [
           "Requirement gathering with Product Owners and MVP definition.",
           "Relational database modeling from scratch.",
-          "Responsive frontend development faithful to design.",
-          "Support for new developers joining the project.",
-          "Creation of unit and integration tests."
+          "Creation of unit and integration tests.",
+          "Application of SOLID principles and Clean Code.",
+          "Responsive frontend development faithful to the design.",
+          "Support and leadership in onboarding new developers to the project.",
+          "Application of agile methodologies."
         ],
-        techStack: ["Java", "Spring Boot", "Angular", "SQL"]
+        techStack: ["Java", "Spring Boot", "Angular", "PostgreSQL"]
       },
       {
         company: "Salutho",
         role: "Fullstack Developer",
         period: "Previous",
-        description: "Working on a Clinical Management SaaS (real market product), focused on new features and improvements.",
+        description: "Working on a Clinical Management SaaS, focused on new features and improvements.",
         achievements: [
-          "Development of inventory management module.",
-          "WhatsApp messaging system (reminders and confirmations).",
-          "Implementation of chat service and participation in product discussions.",
-          "Focus on usability and user experience."
+          "Development of an inventory management module and internal chat service.",
+          "Messaging system for WhatsApp (reminders and confirmations).",
+          "Participation in product discussions focused on usability and user experience."
         ],
         techStack: ["React", "Django", "PostgreSQL", "Python"]
       },
       {
         company: "LabTIC (UDESC)",
-        role: "Fullstack Development Intern",
+        role: "Fullstack Developer",
         period: "Early Career",
-        description: "Building systems without frameworks to gain a deep understanding of the language.",
+        description: "Building systems without frameworks for a deep understanding of the language.",
         achievements: [
           "Building a student management system from scratch.",
-          "Using vanilla JavaScript to solidify concepts.",
-          "Maintenance of the official UDESC system (Polvo).",
-          "Agile SCRUM methodology and bug fixing."
+          "Use of Vanilla JavaScript to solidify concepts.",
+          "Maintenance of UDESC's official management system.",
+          "SCRUM agile methodology and bug fixing."
         ],
         techStack: ["JavaScript", "Vue.js", "Node.js", "MongoDB"]
       }
@@ -271,53 +280,37 @@ const EN_CONTENT: Content = {
     },
     items: [
       {
-        title: "Clinical Management System",
-        description: "SaaS platform for clinics, focused on optimizing patient flow and medical inventory control.",
-        image: "https://picsum.photos/600/400?random=1",
-        tags: ["React", "Django", "PostgreSQL"],
-        githubUrl: "#",
-        category: 'personal'
-      },
-      {
-        title: "Health Monitoring App",
-        description: "MVP application developed with clean architecture, allowing tracking of patient vital metrics.",
-        image: "https://picsum.photos/600/400?random=2",
-        tags: ["Java", "Spring Boot", "Angular"],
-        githubUrl: "#",
+        title: "Upsidenet Challenge",
+        description: "The project simulates an ecosystem of fictional laboratories to demonstrate the implementation of Private Data Collections, segregating public information from sensitive data across different organizations.",
+        image: "/assets/portfolio/upsidenet.png",
+        tags: ["Go", "Blockchain"],
+        githubUrl: "https://github.com/bastosanaa/upsidenet-challenge",
         category: 'challenge'
       },
       {
-        title: "LabTIC Academic Portal",
-        description: "Management system for academic entities developed with a focus on performance and usability.",
-        image: "https://picsum.photos/600/400?random=3",
-        tags: ["Vue.js", "Node.js", "MongoDB"],
-        githubUrl: "#",
+        title: "Parallel Prog Project",
+        description: "Explores parallel programming concepts by implementing three versions of a task: sequential, manually multi-threaded, and using a custom thread-pool library.",
+        image: "/assets/portfolio/parallel_prog.png",
+        tags: ["C", "Parallel Programming"],
+        githubUrl: "https://github.com/bastosanaa/parallel_prog_project",
         category: 'academic'
       },
       {
-        title: "Task Management API",
-        description: "RESTful API developed to exercise advanced Spring Security concepts and JWT authentication.",
-        image: "https://picsum.photos/600/400?random=4",
-        tags: ["Java", "Spring Boot", "JWT", "Docker"],
-        githubUrl: "#",
-        category: 'challenge'
-      },
-      {
-        title: "Weather Dashboard",
-        description: "Interactive interface for visualizing weather data consuming external APIs in real-time.",
-        image: "https://picsum.photos/600/400?random=5",
-        tags: ["Vue.js", "Axios", "CSS Grid"],
-        githubUrl: "#",
+        title: "University Portal (Polvo)",
+        description: "Academic entity management system and assessment activities developed in pure JavaScript with a focus on learning.",
+        image: "/assets/portfolio/labtic_polvo.PNG",
+        tags: ["JavaScript", "Node.js", "MongoDB"],
+        githubUrl: "",
         category: 'personal'
       },
       {
-        title: "Sorting Algorithm Visualizer",
-        description: "Educational project to visualize and compare performance between different sorting algorithms.",
-        image: "https://picsum.photos/600/400?random=6",
-        tags: ["Vanilla JavaScript", "Canvas API"],
-        githubUrl: "#",
+        title: "API Security System",
+        description: "API developed in Go with a microservices architecture for the control, monitoring, and notification of anti-theft alarm systems.",
+        image: "/assets/portfolio/task_manager_api.PNG",
+        tags: ["Go", "Microservices"],
+        githubUrl: "/assets/portfolio/security_sys.PNG",
         category: 'academic'
-      }
+      },
     ]
   },
   footer: {

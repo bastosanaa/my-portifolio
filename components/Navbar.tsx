@@ -137,7 +137,7 @@ const Navbar: React.FC = () => {
           isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
         }`}
       >
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col bg-white/95 w-full rounded-lg shadow-lg py-8">
           {content.nav.map((item) => (
             <a
               key={item.label}
@@ -150,10 +150,6 @@ const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
-        </div>
-        
-        <div className="mt-auto mb-8 text-center text-stone-400 text-sm">
-           <p>© {new Date().getFullYear()} Ana Luiza</p>
         </div>
       </div>
     </nav>
