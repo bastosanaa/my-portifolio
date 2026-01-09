@@ -159,7 +159,7 @@ const PT_CONTENT: Content = {
       {
         title: "Portal Acadêmico (Polvo)",
         description: "Sistema de gerenciamento de entidades acadêmicas e realização de atividades avaliativas desenvolvido em JavaScript puro com foco em aprendizagem",
-        image: "/assets/portfolio/labtic_polvo.PNG",
+        image: "/assets/portfolio/labtic_polvo.png",
         tags: ["JavaScript", "Node.js", "MongoDB"],
         githubUrl: "",
         category: 'personal'
@@ -167,7 +167,7 @@ const PT_CONTENT: Content = {
       {
         title: "API Sistema Antifurto",
         description: "API desenvolvida em Go com arquitetura de microsserviços para o controle, monitoramento e notificação de sistemas de alarme antifurto",
-        image: "/assets/portfolio/security_sys.PNG",
+        image: "/assets/portfolio/security_sys.png",
         tags: ["Go", "Microservices"],
         githubUrl: "https://github.com/bastosanaa/sistemaAntifurtoAPI",
         category: 'academic'
@@ -298,7 +298,7 @@ const EN_CONTENT = {
       {
         title: "University Portal (Polvo)",
         description: "Academic entity management system and assessment activities developed in pure JavaScript with a focus on learning.",
-        image: "/assets/portfolio/labtic_polvo.PNG",
+        image: "/assets/portfolio/labtic_polvo.png",
         tags: ["JavaScript", "Node.js", "MongoDB"],
         githubUrl: "",
         category: 'personal'
@@ -306,9 +306,9 @@ const EN_CONTENT = {
       {
         title: "API Security System",
         description: "API developed in Go with a microservices architecture for the control, monitoring, and notification of anti-theft alarm systems.",
-        image: "/assets/portfolio/task_manager_api.PNG",
+        image: "/assets/portfolio/security_sys.png",
         tags: ["Go", "Microservices"],
-        githubUrl: "/assets/portfolio/security_sys.PNG",
+        githubUrl: "https://github.com/bastosanaa/sistemaAntifurtoAPI",
         category: 'academic'
       },
     ]

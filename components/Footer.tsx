@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="flex gap-6 order-1 md:order-2">
-          <a href="#" className="text-stone-400 hover:text-pastel-sage transition-colors transform hover:scale-110 p-2">
+          <a href="https://github.com/bastosanaa" className="text-stone-400 hover:text-pastel-sage transition-colors transform hover:scale-110 p-2">
             <Github size={20} />
           </a>
-          <a href="#" className="text-stone-400 hover:text-pastel-blue transition-colors transform hover:scale-110 p-2">
+          <a href="https://www.linkedin.com/in/ana-bastos-7b0103272/" className="text-stone-400 hover:text-pastel-blue transition-colors transform hover:scale-110 p-2">
             <Linkedin size={20} />
           </a>
           <a href="mailto:email@exemplo.com" className="text-stone-400 hover:text-pastel-clay transition-colors transform hover:scale-110 p-2">
