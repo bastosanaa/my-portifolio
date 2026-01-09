@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Globe, Menu, X } from 'lucide-react';
 import { useLanguage } from '../LanguageContext';
 
 const Navbar: React.FC = () => {
@@ -106,6 +106,7 @@ const Navbar: React.FC = () => {
             onClick={toggleLanguage}
             className="flex items-center gap-2 text-xs font-semibold tracking-wider text-stone-500 hover:text-stone-800 transition-colors px-3 py-1.5 rounded-full hover:bg-stone-100"
           >
+            <Globe size={14} className="text-stone-500" />
             <span className={language === 'pt' ? 'text-stone-800' : 'text-stone-400'}>PT</span>
             <span className="text-stone-300">|</span>
             <span className={language === 'en' ? 'text-stone-800' : 'text-stone-400'}>EN</span>
@@ -116,9 +117,10 @@ const Navbar: React.FC = () => {
         <div className="flex items-center gap-3 md:hidden z-50 relative">
            <button
             onClick={toggleLanguage}
-            className="text-xs font-bold text-stone-600 bg-pastel-sageLight border border-pastel-sage/20 px-3 py-1.5 rounded-full transition-colors active:scale-95"
+            className="flex items-center gap-1 text-xs font-bold text-stone-600 bg-pastel-sageLight border border-pastel-sage/20 px-3 py-1.5 rounded-full transition-colors active:scale-95"
             aria-label="Toggle Language"
           >
+            <Globe size={14} className="text-stone-500" />
             {language === 'pt' ? 'PT' : 'EN'}
           </button>
           <button 

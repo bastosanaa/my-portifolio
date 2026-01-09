@@ -12,10 +12,10 @@ export interface ExperienceItem {
 export interface EducationItem {
   degree: string;
   institution: string;
+  period?: string;
   description: string;
   topics: string[];
 }
-
 export interface ProjectItem {
   title: string;
   description: string;

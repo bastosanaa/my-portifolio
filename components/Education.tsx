@@ -26,9 +26,16 @@ const Education: React.FC = () => {
               </div>
 
               <div className="space-y-3 md:space-y-4 w-full">
-                <div>
-                  <h4 className="text-lg md:text-xl font-semibold text-stone-800 leading-tight">{item.degree}</h4>
-                  <p className="text-stone-500 font-medium font-serif italic mt-1">{item.institution}</p>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                  <div>
+                    <h4 className="text-lg md:text-xl font-semibold text-stone-800 leading-tight">{item.degree}</h4>
+                    <p className="text-stone-500 font-medium font-serif italic mt-1">{item.institution}</p>
+                  </div>
+                  {item.period && (
+                    <span className="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-wide bg-stone-100 text-stone-500 border border-stone-200 whitespace-nowrap mt-1 sm:mt-0 self-start">
+                      {item.period}
+                    </span>
+                  )}
                 </div>
                 
                 <p className="text-stone-600 leading-relaxed text-sm md:text-base text-justify md:text-left">

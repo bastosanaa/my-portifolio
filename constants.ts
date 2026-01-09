@@ -63,6 +63,7 @@ const PT_CONTENT: Content = {
       {
       degree: "Bacharelado em Sistemas de Informação",
       institution: "Universidade Federal de Santa Catarina (UFSC)",
+      period: "Previsão: 2027.2",
       description: `Escolhi o curso de Sistemas de Informação por enxergar nele a combinação ideal entre tecnologia, visão de negócio e gestão de processos. Desde o início da graduação, meu objetivo foi desenvolver não apenas habilidades técnicas, mas também um pensamento analítico e organizado, capaz de transformar ideias em soluções digitais viáveis e bem estruturadas.
       Ao longo do curso, tive contato com áreas como desenvolvimento de software, arquitetura de sistemas, bancos de dados, engenharia de software e gestão de projetos, campos que despertam meu interesse por permitirem atuar em todas as etapas de construção de um produto, do planejamento à implementação.`,
       topics: [
@@ -202,6 +203,8 @@ const EN_CONTENT = {
       {
       degree: "Bachelor of Information Systems",
         institution: "Federal University of Santa Catarina (UFSC)",
+                period: "Exp. Graduation: 2027.2",
+
         description: `I chose the Information Systems degree because I saw in it the ideal combination of technology, business vision, and process management. Since the beginning of my studies, my goal has been to develop not only technical skills but also analytical and organized thinking, capable of transforming ideas into viable and well-structured digital solutions.
         Throughout the course, I engaged with areas such as software development, system architecture, databases, software engineering, and project management—fields that spark my interest by allowing me to act in every stage of product construction, from planning to implementation.`,
         topics: [
