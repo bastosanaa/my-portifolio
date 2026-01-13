@@ -142,6 +142,14 @@ const PT_CONTENT: Content = {
     },
     items: [
       {
+        title: "Dashboard ANTT",
+        description: "Um dashboard para análise da infraestrutura ferroviária brasileira, desenvolvido visando apresentar habilidades em ETL, modelagem de dados e desenvolvimento de painéis interativos.",
+        image: "/assets/portfolio/antt_dash.png",
+        tags: ["Python", "Streamlit", "SQL", "PySpark", "ETL"],
+        githubUrl: "https://github.com/bastosanaa/ANTT-data-analysis",
+        category: 'challenge'
+      },
+      {
         title: "Upsidenet Challenge",
         description: "O projeto simula um ecossistema de laboratórios fictícios para demonstrar a implementação de Private Data Collections, segregando informações públicas de dados sensíveis entre diferentes organizações.",
         image: "/assets/portfolio/upsidenet.png",
@@ -281,6 +289,14 @@ const EN_CONTENT = {
       challenge: "Challenges"
     },
     items: [
+      {
+        title: "ANTT Dashboard",
+        description: "A dashboard for analyzing Brazilian railway infrastructure, developed to showcase skills in ETL, data modeling, and interactive dashboard development.",
+        image: "/assets/portfolio/antt_dash.png",
+        tags: ["Python", "Streamlit", "SQL", "PySpark", "ETL"],
+        githubUrl: "https://github.com/bastosanaa/ANTT-data-analysis",
+        category: 'challenge'
+    },
       {
         title: "Upsidenet Challenge",
         description: "The project simulates an ecosystem of fictional laboratories to demonstrate the implementation of Private Data Collections, segregating public information from sensitive data across different organizations.",
