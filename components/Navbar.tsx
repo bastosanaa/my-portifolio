@@ -75,9 +75,9 @@ const Navbar: React.FC = () => {
         <a 
           href="#" 
           onClick={(e) => handleScrollTo(e, '#root')} // Optional: scroll to top
-          className="text-xl font-serif font-bold text-stone-800 tracking-tight flex items-center gap-2 z-50 relative"
+          className="text-xl font-serif font-bold text-stone-800 tracking-tight flex items-center gap-1 z-50 relative"
         >
-          Ana Luiza<span className="text-pastel-sage">.</span>
+          Ana Luiza<span className="text-pastel-sage">_</span>
         </a>
 
         {/* Desktop Menu */}

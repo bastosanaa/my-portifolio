@@ -29,3 +29,15 @@ export interface NavItem {
   label: string;
   href: string;
 }
+
+export interface AboutSection {
+  icon: string;
+  title: string;
+  items: string[];
+}
+
+export interface About {
+  title: string;
+  intro: string;
+  sections: AboutSection[];
+}

@@ -1,3 +1,4 @@
+import { title } from 'process';
 import { ExperienceItem, EducationItem, ProjectItem, NavItem, ProjectCategory } from './types';
 
 export type Language = 'pt' | 'en';
@@ -14,6 +15,15 @@ interface Content {
       creative: string;
       dedication: string;
     }
+  };
+  about: {
+    title: string;
+    paragraphs: string[];
+    sections: {
+      icon: string;
+      title: string;
+      items: string[];
+    }[];
   };
   education: {
     title: string;
@@ -41,6 +51,7 @@ interface Content {
 
 const PT_CONTENT: Content = {
   nav: [
+    { label: 'Home', href: '#home' },
     { label: 'Sobre', href: '#sobre' },
     { label: 'Formação', href: '#formacao' },
     { label: 'Experiência', href: '#experiencia' },
@@ -56,6 +67,36 @@ const PT_CONTENT: Content = {
       creative: "Criatividade",
       dedication: "Dedicação"
     }
+  },
+  about: {
+    title: "Sobre mim",
+    paragraphs: [
+      "Fora do código, sou uma pessoa que gosta de estar em constante movimento e de se desafiar a ser melhor a cada dia. Tenho uma ligação forte com o esporte, que vejo como um hábito essencial para fortalecer o corpo e equilibrar a mente. Já fui atleta de ginástica rítmica quando mais nova e, hoje, estou em evolução na corrida, com a meta atual de alcançar os 10 km!",
+      "Me considero uma pessoa criativa e encontro nas atividades manuais e na leitura uma forma de desacelerar, exercitar o foco e praticar a paciência. Desenho, pintura e crochê fazem parte dos meus hobbies, assim como a leitura de histórias que me permitem sair um pouco da realidade e expandir a imaginação.",
+      "Acredito que meus passatempos refletem diretamente meu estilo de vida e impactam positivamente minha trajetória profissional. Gosto de me desafiar, aprender coisas novas e me comprometer com a consistência necessária para evoluir no que me proponho a fazer. Sou muito focada na pessoa e na profissional que quero me tornar e trabalho nisso todos os dias."
+    ],
+    sections: [
+      {
+        icon: "Sparkles",
+        title: "Valores",
+        items: [
+          "Evolução contínua",
+          "Equilíbrio da mente e corpo",
+          "Exercício da criatividade",
+          "Persistência e constância"
+        ]
+      },
+      {
+        icon: "Heart",
+        title: "Hobbies",
+        items: [
+          "Corrida e esportes",
+          "Atividades manuais, desenho e crochê",
+          "Leitura",
+          "Contato com a natureza"
+        ]
+      },
+    ]
   },
   education: {
     title: "Formação Acadêmica",
@@ -189,7 +230,8 @@ const PT_CONTENT: Content = {
 };
 const EN_CONTENT = {
   nav: [
-    { label: 'About', href: '#sobre' }, // Mantive os hrefs iguais para não quebrar a navegação
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#sobre' },
     { label: 'Education', href: '#formacao' },
     { label: 'Experience', href: '#experiencia' },
     { label: 'Portfolio', href: '#portfolio' },
@@ -204,6 +246,36 @@ const EN_CONTENT = {
       creative: "Creativity",
       dedication: "Dedication"
     }
+  },
+  about: {
+    title: "About Me",
+    paragraphs: [
+      "Beyond coding, I am someone who loves staying active and challenging myself to be better every day. I have a strong connection with sports, which I view as an essential habit for strengthening the body and balancing the mind. I used to be a rhythmic gymnast, and today I am progressing in running, with a current goal of hitting the 10 km mark!",
+      "I consider myself a creative person, finding ways to slow down, sharpen my focus, and practice patience through crafts and reading. Drawing, painting, and crochet are part of my hobbies, as is reading stories that allow me to escape reality for a while and expand my imagination.",
+      "I believe my pastimes directly reflect my lifestyle and positively impact my professional journey. I enjoy challenging myself, learning new things, and maintaining the consistency required to evolve in whatever I set out to do. I am deeply focused on the person and professional I want to become, and I work towards that every single day."
+    ],
+    sections: [
+      {
+        icon: "Sparkles",
+        title: "Values",
+        items: [
+          "Continuous evolution",
+          "Mind and body balance",
+          "Exercising creativity",
+          "Persistence and consistency"
+        ]
+      },
+      {
+        icon: "Heart",
+        title: "Hobbies",
+        items: [
+          "Running and sports",
+          "Crafts, drawing, and crochet",
+          "Reading",
+          "Connection with nature"
+        ]
+      },
+    ]
   },
   education: {
     title: "Academic Background",
